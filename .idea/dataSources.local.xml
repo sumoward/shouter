@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="Rails shouter: development" uuid="16cc7fe4-035c-4ec5-b0f0-d93a00f1bd87">
+    <data-source name="Sqlite (Xerial) - development.sqlite3" uuid="27310a6e-8bd5-4b7d-b111-2e0ab478d33b">
+      <secret-storage>master_key</secret-storage>
       <auth-required>false</auth-required>
     </data-source>
   </component>

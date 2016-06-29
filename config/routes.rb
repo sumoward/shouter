@@ -1,12 +1,19 @@
 Rails.application.routes.draw do
 
-  root to:'homes#show', via: :get
+  root to: 'homes#show', via: :get
+
   resource :dashboard, only: [:show]
+  resources :shouts, only: [:show]
+  resources :text_shouts, only: [:create]
+  resources :photo_shouts, only: [:create]
+  resources :hashtags, only: [:show]
+  resource :search, only: [:show]
+
   resource :session, only: [:new, :create, :destroy]
-  resources :users, only: [:new, :create, :show]
-  resources :shouts, only: [:create, :show]
-
-
+  resources :users, only: [:index, :new, :create, :show] do
+    post 'follow' => 'follows#create'
+    delete 'unfollow' => 'follows#destroy'
+    end
 
 
   # The priority is based upon order of creation: first created -> highest priority.
